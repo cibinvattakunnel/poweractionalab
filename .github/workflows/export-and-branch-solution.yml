@@ -28,6 +28,7 @@ env:
 #edit your values here
   ENVIRONMENT_URL: https://org00330896.crm6.dynamics.com/
   USERNAME: cibin.vattakunnel@vestonecapital.com
+  PWD: T1ntuM0nR0ck5
 
 permissions:
   contents: write
@@ -48,14 +49,14 @@ jobs:
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ env.password }}
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         user-name: ${{env.USERNAME}}
-        password-secret: ${{ secrets.password }}
+        password-secret: ${{ env.password }}
         solution-name: ${{ github.event.inputs.solution_name }}
         solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
 
