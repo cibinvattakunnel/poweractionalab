@@ -27,8 +27,8 @@ on:
 env:
 #edit your values here
   ENVIRONMENT_URL: https://org00330896.crm6.dynamics.com/
-  USERNAME: cibin.vattakunnel@vestonecapital.com
-  PWD: T1ntuM0nR0ck5
+  USERNAME: cjkn
+  PWD: tytytyt
 
 permissions:
   contents: write
